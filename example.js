@@ -1,8 +1,7 @@
 $(function () {
-  $('button[href]').click(function (event) {
+  $('button[href]').each(function () {
     window.protocolCheck($(this).attr('href'), function () {
-      alert('protocol not recognized')
-    })
-    event.preventDefault ? event.preventDefault() : (event.returnValue = false)
+      $(this).css('background-color', 'red')
+    }.bind(this))
   })
 })
