@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head lang="en">
-    <meta charset="UTF-8" />
-    <title>Custom Protocol Detection</title>
-  </head>
 
-  <body>
-    <h1>Click one of these labels:</h1>
+<head lang="en">
+  <meta charset="UTF-8" />
+  <title>Custom Protocol Detection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css" />
+  <link rel="stylesheet" href="https://newcss.net/theme/night.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+    }
 
-    <div href="blahblah:randomstuff">Non-exist protocol</div>
-    <div href="mailto:johndoe@somewhere.com">Send email</div>
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="protocolcheck.js"></script>
-    <script src="example.js"></script>
-  </body>
+    button {
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Podcatcher:</h1>
+
+  <button href="podcat://feeds.br.de/tagesticket-der-frueh-podcast/feed.xml">Podcat</button>
+
+  <button href="castro://subscribe/feeds.br.de/tagesticket-der-frueh-podcast/feed.xml">Castro</button>
+
+  <button href="pktc://subscribe/feeds.br.de/tagesticket-der-frueh-podcast/feed.xml">Pocket Cast</button>
+
+  <button href="overcast://x-callback-url/add?url=feeds.br.de/tagesticket-der-frueh-podcast/feed.xml">Overcast</button>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="protocolcheck.js"></script>
+  <script src="example.js"></script>
+</body>
+
 </html>
